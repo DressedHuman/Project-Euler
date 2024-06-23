@@ -13,10 +13,11 @@ public class p9 {
         while (!found && 3 * (a + 1) <= 1000) {
             int b = a + 1;
             int limit = (1000 - a) / 2;
-            while (b <= limit) {
+            while (!found && b <= limit) {
                 int c = (1000 - a - b);
                 if (c * c == a * a + b * b) {
-                    System.out.printf("%d, %d, %d", a, b, c);
+                    System.out.printf("%d, %d, %d\n", a, b, c);
+                    System.out.println(a*b*c);
                     found = true;
                 }
                 ++b;
